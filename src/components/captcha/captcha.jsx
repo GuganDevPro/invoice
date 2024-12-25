@@ -14,7 +14,7 @@ export default function Captcha() {
     let refreshingTime = minutesToMilliseconds(process.env.NEXT_PUBLIC_CAPTCHA_REFRESH_TIME);
     const { setCaptchaValue } = useGlobalContext();
     const [localCaptcha, setLocalCaptcha] = useState("");
-    const canvasStyling = { width: 200, height: 50, backgroundColor: '#123456', font: "30px 'Lucida Console', monospace", fillStyle: 'white', textAlign: 'center', textBaseline: 'middle' };
+    const canvasStyling = { width: 200, height: 50, backgroundColor: '#434175', font: "30px 'Lucida Console', monospace", fillStyle: 'white', textAlign: 'center', textBaseline: 'middle' };
     const strokeStyling = { color: "#abcdef", strokeCount: 5 };
     const captchaLength = 5;
 
@@ -79,7 +79,8 @@ export default function Captcha() {
         <>
             <div>
                 <img id="captchaImage" alt="CAPTCHA" />
-                <button class="refresh_button" type="button" onClick={refreshCaptcha}>refresh</button>
+                {/* <i class="fa fa-refresh fa-lg fa-light" aria-hidden="true" onClick={refreshCaptcha}></i> */}
+                <button class="refresh_button" type="button" onClick={refreshCaptcha} ><img src="/assets/login/captcha-refresh2.png"/></button>
             </div>
         </>
     );

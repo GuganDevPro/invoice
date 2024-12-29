@@ -1,0 +1,123 @@
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .modal-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .form-input,
+  .file-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus,
+  .file-input:focus {
+    border-color: #6291fd;
+    outline: none;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .submit-btn,
+  .cancel-btn {
+    padding: 10px 75px; 
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .submit-btn,
+    .cancel-btn {
+      padding: 10px 50px; 
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .submit-btn,
+    .cancel-btn {
+      padding: 10px 30px; 
+      font-size: 12px;
+      width: 100%; 
+    }
+  }
+  
+  
+  .submit-btn {
+    background: #42ca82;
+    color: white;
+  }
+  
+  .submit-btn:hover {
+    background: #388e3c;
+  }
+  
+  .cancel-btn {
+    background: #a09a99;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background: #d32f2f;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 7px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }

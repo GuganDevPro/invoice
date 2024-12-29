@@ -1,12 +1,14 @@
-import { emailValidation, numOnly, numAndChar, charOnly } from "@/utils/common";
+import { emailValidation, useNavigate, numAndChar, charOnly } from "@/utils/common";
 import React, { useState, useEffect, useContext } from 'react';
 // import Captcha, { validateCaptcha } from "@/components/captcha/captcha"
 // import { loginCall } from "../../utils/axios";
 // import Image from 'next/image'
 import { useGlobalContext } from "@/utils/GlobalProvider";
-import handleError from "@/utils/ErrorHandler"
-import loginStyling from "../auth/login.module.scss"
+import handleError from "@/utils/ErrorHandler";
+import loginStyling from "../auth/login.module.scss";
+// import dashboard from "../../components/dashboard/dashboard";
 export default function Login() {
+  const { handleNavigation } = useNavigate();
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     email: '',
@@ -46,16 +48,17 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const validationErrors = validate();
-      if (Object.keys(validationErrors).length > 0) {
-        setErrors(validationErrors);
-        return;
-      }
+      handleNavigation('/dashboard');
+      // const validationErrors = validate();
+      // if (Object.keys(validationErrors).length > 0) {
+      //   setErrors(validationErrors);
+      //   return;
+      // }
       // if (!validateCaptcha(formData.captcha, captchaValue)) {
       //   return alert('Captcha validation failed. Please try again.');
       // }
       // const response = await loginCall('login', formData);
-      console.log('Login Successful:', response.data);
+      // console.log('Login Successful:', response.data);
     } catch (err) {
       handleError(err);
     }

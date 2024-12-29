@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 export const emailValidation = (event) => {
   const char = event.key;
   const validChars = /^[a-zA-Z0-9-.@]+$/;
@@ -30,3 +32,13 @@ export const minutesToSeconds = (minutes) => {
 export const minutesToMilliseconds = (minutes) => {
   return minutes * 60 * 1000;
 };
+
+export function useNavigate() {
+  const router = useRouter();
+
+  const handleNavigation = (path) => {
+      router.push(path);
+  };
+
+  return { handleNavigation };
+}

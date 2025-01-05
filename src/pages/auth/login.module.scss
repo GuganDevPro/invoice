@@ -93,6 +93,7 @@ form.sign-in-form {
 	grid-template-columns: 15% 85%;
 	padding: 0 0.4rem;
 	position: relative;
+	margin-top: 20px;
 	i {
 		text-align: center;
 		line-height: 55px;
@@ -150,7 +151,7 @@ form.sign-in-form {
 	color: $color_6;
 	text-transform: uppercase;
 	font-weight: 600;
-	margin: 10px 0;
+	margin: 15px 0;
 	cursor: pointer;
 	transition: 0.5s;
 	&:hover {

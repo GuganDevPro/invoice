@@ -6,9 +6,10 @@ const GlobalContext = createContext();
 // Context Provider component
 export const GlobalProvider = ({ children }) => {
   const [captchaValue, setCaptchaValue] = useState(""); 
+  const [sideBarOptions, setSideBarOptions] = useState(""); 
 
   return (
-    <GlobalContext.Provider value={{ captchaValue, setCaptchaValue }}>
+    <GlobalContext.Provider value={{ captchaValue, setCaptchaValue, sideBarOptions, setSideBarOptions }}>
       {children}
     </GlobalContext.Provider>
   );

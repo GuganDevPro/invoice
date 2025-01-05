@@ -48,12 +48,12 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      handleNavigation('/dashboard');
-      // const validationErrors = validate();
-      // if (Object.keys(validationErrors).length > 0) {
-      //   setErrors(validationErrors);
-      //   return;
-      // }
+      // handleNavigation('/dashboard');
+      const validationErrors = validate();
+      if (Object.keys(validationErrors).length > 0) {
+        setErrors(validationErrors);
+        return;
+      }
       // if (!validateCaptcha(formData.captcha, captchaValue)) {
       //   return alert('Captcha validation failed. Please try again.');
       // }
@@ -74,12 +74,12 @@ export default function Login() {
                   <div className={`${loginStyling['input-field']}`} >
                     <i className='fas fa-user' ></i>
                     <input type="text" placeholder="Usermail" name='email' onKeyDown={emailValidation} value={formData.email} onChange={handleChange}/>
-                    {errors.email && <label style={{ color: "red" }}>{errors.email}</label>}
+                    {errors.email && <label style={{ color: "red",width:'250px' }}>{errors.email}</label>}
                   </div>
                   <div className={`${loginStyling['input-field']}`} >
                     <i className='fas fa-lock' ></i>
                     <input type="password" placeholder="Password" name="password" value={formData.password} onChange={handleChange} onKeyDown={numAndChar}/>
-                    {errors.password && <label style={{ color: "red" }}>{errors.password}</label>}
+                    {errors.password && <label style={{ color: "red" ,width:'250px' }}>{errors.password}</label>}
                   </div>
                   <input type="submit" value="Login" className={`${loginStyling['btn']}`} />
                 </form>

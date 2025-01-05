@@ -1,0 +1,128 @@
+.app-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+  }
+  .app-content-headerText {
+    color: var(--app-content-main-color);
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  .up-arrow,
+.down-arrow {
+  color: var(--app-content-main-color);
+}
+.up-arrow,
+.down-arrow {
+  display: none;
+}
+@media (max-width: 700px) {
+    .up-arrow,
+    .down-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .drpdwnUl {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 65px;
+    background-color: var(--popup-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 8px 0;
+    list-style: none;
+    margin: 0;
+    z-index: 1000;
+    color: var(--app-content-main-color);
+  }
+  
+  // .drpdwnli:hover {
+  //   background-color: #f0f0f0;
+  // }
+  .drpdwnUl li.active {
+    background-color: #8b9ac6;
+  }
+  .mode-switch {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: var(--app-content-main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  .mode-switch .moon {
+    fill: var(--app-content-main-color);
+  }
+  
+  .mode-switch.active .moon {
+    fill: none;
+  }
+  .account-info {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-top: auto;
+  }
+  .account-info-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .profile-icon {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }  
+
+  @media (max-width: 370px) {
+    .app-content-headerText {
+      display: block;
+      max-width: 120px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+   
+  }
+  @media (max-width: 339px) {
+    .app-content-headerText {
+      max-width: 100px;
+    }
+  }
+  .account-info-picture ul{
+    margin-top:10px;
+    margin-left: -56px;
+    color: var(--app-content-main-color);
+  }
+  .logout-icon,
+  .user-icon{
+    height: 20px;
+    width: 20px;
+    color: var(--app-content-main-color);
+  }
+  .profile-popup{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+  .profile-popup .drpdwnli:hover{
+      color: #3aa058;
+  }
